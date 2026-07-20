@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Progreso | Finca Ganadera</title>
+<meta name="description" content="Finca ganadera El Progreso: producción de leche, carne, ganado y productos artesanales con calidad y tradición familiar.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand" aria-label="El Progreso, inicio">
+      <svg class="brand-mark" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M14 26c3-8 9-13 16-13s13 5 16 13c-4-2-9-3-16-3s-12 1-16 3Z" fill="currentColor"/>
+        <path d="M18 30c0 8 5.5 15 12 15s12-7 12-15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="24" cy="27" r="1.6" fill="var(--bg)"/>
+        <circle cx="36" cy="27" r="1.6" fill="var(--bg)"/>
+      </svg>
+      <span class="brand-text">EL PROGRESO</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#productos" class="nav-link">Productos</a></li>
+        <li><a href="#galeria" class="nav-link">Galería</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contacto" class="btn btn-accent nav-cta">Contáctanos</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ INICIO / HERO ============ -->
+  <section id="inicio" class="hero">
+    <svg class="hero-hills" viewBox="0 0 1440 500" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="var(--green)" opacity="0.55" d="M0 320 C 240 260 420 380 700 300 C 980 220 1180 340 1440 280 L1440 500 L0 500 Z"/>
+      <path fill="var(--green-dark)" d="M0 400 C 260 340 460 430 760 370 C 1040 320 1240 420 1440 360 L1440 500 L0 500 Z"/>
+      <circle cx="1180" cy="110" r="70" fill="var(--gold)" opacity="0.9"/>
+    </svg>
+
+    <div class="container hero-inner">
+      <span class="tag-badge reveal">
+        <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="6.2" r="1.4" fill="currentColor"/></svg>
+        FINCA GANADERA · VALLE DE LA VEGA
+      </span>
+      <h1 class="hero-title reveal">Tierra fértil,<br>ganado sano,<br><em>familia de siempre.</em></h1>
+      <p class="hero-tagline reveal">Desde nuestros potreros hasta tu mesa: leche, carne y genética bovina con la calidad que solo da el trabajo de tres generaciones.</p>
+      <div class="hero-actions reveal">
+        <a href="#servicios" class="btn btn-primary">Ver servicios</a>
+        <a href="#contacto" class="btn btn-outline">Solicitar información</a>
+      </div>
+    </div>
+    <a href="#nosotros" class="scroll-cue" aria-label="Bajar a la siguiente sección">↓</a>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <span class="tag-badge reveal">N.º 01 · NOSOTROS</span>
+      <h2 class="section-title reveal">Una finca que crece desde 1986</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h3>Nuestra historia</h3>
+          <p>El Progreso nació como un pequeño hato familiar de doce cabezas de ganado. Con el paso de los años, y gracias al esfuerzo de tres generaciones, se convirtió en una finca de referencia en la región, reconocida por la calidad de su leche, su carne y su manejo responsable de la tierra.</p>
+        </div>
+        <div class="about-photo reveal">
+          <div class="photo-frame ph-instalaciones"><img src="img/instalaciones.jpg" alt="Instalaciones principales" loading="lazy" onerror="this.remove()"><span>Instalaciones principales</span></div>
+        </div>
+      </div>
+
+      <div class="mvv-grid">
+        <div class="mvv-card reveal">
+          <span class="mvv-icon" aria-hidden="true">🎯</span>
+          <h3>Misión</h3>
+          <p>Producir alimentos de origen bovino de alta calidad, mediante prácticas sostenibles que garanticen bienestar animal, cuidado ambiental y desarrollo para las familias de la comunidad.</p>
+        </div>
+        <div class="mvv-card reveal">
+          <span class="mvv-icon" aria-hidden="true">🌄</span>
+          <h3>Visión</h3>
+          <p>Ser la finca ganadera líder de la región, referente en innovación, trazabilidad y producción sostenible, manteniendo siempre nuestra esencia familiar.</p>
+        </div>
+        <div class="mvv-card reveal">
+          <span class="mvv-icon" aria-hidden="true">🤝</span>
+          <h3>Valores</h3>
+          <p>Honestidad, trabajo en equipo, respeto por los animales y la tierra, compromiso con la calidad y vocación de servicio hacia nuestros clientes.</p>
+        </div>
+      </div>
+
+      <div class="team-block reveal">
+        <h3>Nuestro equipo</h3>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="photo-frame ph-team"><img src="img/equipo-ramirez.jpg" alt="D. Ramírez" loading="lazy" onerror="this.remove()"><span>D. Ramírez</span></div>
+            <h4>Don Ramírez</h4><p>Administrador general</p>
+          </div>
+          <div class="team-card">
+            <div class="photo-frame ph-team"><img src="img/equipo-pena.jpg" alt="Ing. Peña" loading="lazy" onerror="this.remove()"><span>Ing. Peña</span></div>
+            <h4>Ing. Yolanda Peña</h4><p>Médica veterinaria</p>
+          </div>
+          <div class="team-card">
+            <div class="photo-frame ph-team"><img src="img/equipo-urena.jpg" alt="J. Ureña" loading="lazy" onerror="this.remove()"><span>J. Ureña</span></div>
+            <h4>José Ureña</h4><p>Jefe de ordeño</p>
+          </div>
+          <div class="team-card">
+            <div class="photo-frame ph-team"><img src="img/equipo-feliz.jpg" alt="M. Feliz" loading="lazy" onerror="this.remove()"><span>M. Feliz</span></div>
+            <h4>Miguel Féliz</h4><p>Encargado de potreros</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="facilities-grid reveal">
+        <div class="photo-frame ph-corral"><img src="img/corral.jpg" alt="Corrales" loading="lazy" onerror="this.remove()"><span>Corrales</span></div>
+        <div class="photo-frame ph-ordeno"><img src="img/ordeno.jpg" alt="Sala de ordeño" loading="lazy" onerror="this.remove()"><span>Sala de ordeño</span></div>
+        <div class="photo-frame ph-pastizal"><img src="img/pastizal.jpg" alt="Pastizales" loading="lazy" onerror="this.remove()"><span>Pastizales</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section id="servicios" class="section section-alt">
+    <div class="container">
+      <span class="tag-badge reveal">N.º 02 · SERVICIOS</span>
+      <h2 class="section-title reveal">Lo que hacemos por el campo</h2>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="photo-frame ph-leche"><img src="img/servicio-leche.jpg" alt="Producción de leche" loading="lazy" onerror="this.remove()"><span>Producción de leche</span></div>
+          <h3>Producción de leche</h3>
+          <p>Ordeño mecanizado dos veces al día bajo estrictos controles sanitarios.</p>
+          <ul class="benefits">
+            <li>Leche fresca certificada</li>
+            <li>Cadena de frío garantizada</li>
+            <li>Entrega directa a plantas locales</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="photo-frame ph-venta"><img src="img/servicio-venta.jpg" alt="Venta de ganado" loading="lazy" onerror="this.remove()"><span>Venta de ganado</span></div>
+          <h3>Venta de ganado</h3>
+          <p>Ganado bovino seleccionado para engorde, reproducción y trabajo.</p>
+          <ul class="benefits">
+            <li>Animales con registro sanitario</li>
+            <li>Genética de alto rendimiento</li>
+            <li>Asesoría en la compra</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="photo-frame ph-carne"><img src="img/servicio-carne.jpg" alt="Producción de carne" loading="lazy" onerror="this.remove()"><span>Producción de carne</span></div>
+          <h3>Producción de carne</h3>
+          <p>Ganado engordado con pasto natural y suplementación balanceada.</p>
+          <ul class="benefits">
+            <li>Carne magra y de sabor superior</li>
+            <li>Trazabilidad completa</li>
+            <li>Cortes por encargo</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTOS ============ -->
+  <section id="productos" class="section">
+    <div class="container">
+      <span class="tag-badge reveal">N.º 03 · PRODUCTOS</span>
+      <h2 class="section-title reveal">Directo del campo a tu mesa</h2>
+
+      <div class="products-grid">
+        <article class="product-card reveal">
+          <div class="photo-frame ph-lechefresca"><img src="img/producto-leche.jpg" alt="Leche fresca" loading="lazy" onerror="this.remove()"><span>Leche fresca</span></div>
+          <h3>Leche fresca</h3>
+          <p>Envasada el mismo día del ordeño, sin conservantes.</p>
+          <span class="price">Desde RD$ 80 / galón</span>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="photo-frame ph-queso"><img src="img/producto-queso.jpg" alt="Queso artesanal" loading="lazy" onerror="this.remove()"><span>Queso artesanal</span></div>
+          <h3>Queso artesanal</h3>
+          <p>Elaborado con receta tradicional de la familia.</p>
+          <span class="price">Desde RD$ 220 / libra</span>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="photo-frame ph-yogur"><img src="img/producto-yogur.jpg" alt="Yogur natural" loading="lazy" onerror="this.remove()"><span>Yogur natural</span></div>
+          <h3>Yogur</h3>
+          <p>Cremoso, natural y disponible en presentaciones frutadas.</p>
+          <span class="price">Desde RD$ 120 / litro</span>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="photo-frame ph-carnepremium"><img src="img/producto-carnepremium.jpg" alt="Carne premium" loading="lazy" onerror="this.remove()"><span>Carne premium</span></div>
+          <h3>Carne premium</h3>
+          <p>Cortes seleccionados, empacados al vacío.</p>
+          <span class="price">Desde RD$ 320 / libra</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section id="galeria" class="section section-alt">
+    <div class="container">
+      <span class="tag-badge reveal">N.º 04 · GALERÍA</span>
+      <h2 class="section-title reveal">La finca en imágenes</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal ph-g1"><img src="img/galeria-1.jpg" alt="Ganado en pastoreo" loading="lazy" onerror="this.remove()"><span>Ganado en pastoreo</span></div>
+        <div class="gallery-item reveal ph-g2"><img src="img/galeria-2.jpg" alt="Corrales de manejo" loading="lazy" onerror="this.remove()"><span>Corrales de manejo</span></div>
+        <div class="gallery-item reveal ph-g3"><img src="img/galeria-3.jpg" alt="Pastizales al amanecer" loading="lazy" onerror="this.remove()"><span>Pastizales al amanecer</span></div>
+        <div class="gallery-item reveal ph-g4"><img src="img/galeria-4.jpg" alt="Sala de ordeño" loading="lazy" onerror="this.remove()"><span>Sala de ordeño</span></div>
+        <div class="gallery-item reveal ph-g5"><img src="img/galeria-5.jpg" alt="Personal trabajando" loading="lazy" onerror="this.remove()"><span>Personal trabajando</span></div>
+        <div class="gallery-item reveal ph-g6"><img src="img/galeria-6.jpg" alt="Instalaciones" loading="lazy" onerror="this.remove()"><span>Instalaciones</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <span class="tag-badge reveal">N.º 05 · CONTACTO</span>
+      <h2 class="section-title reveal">Conversemos</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <ul class="contact-list">
+            <li><strong>Dirección:</strong> Km 8, Carretera La Vega – Jarabacoa, La Vega, República Dominicana</li>
+            <li><strong>Teléfono:</strong> <a href="tel:+18095551234">(809) 555-1234</a></li>
+            <li><strong>Correo:</strong> <a href="mailto:contacto@fincaelprogreso.do">contacto@fincaelprogreso.do</a></li>
+            <li><strong>Horario:</strong> Lunes a sábado, 7:00 a.m. – 4:00 p.m.</li>
+          </ul>
+
+          <div class="map-wrap reveal">
+            <iframe
+              title="Ubicación Finca El Progreso"
+              src="https://www.google.com/maps?q=La%20Vega%2C%20Rep%C3%BAblica%20Dominicana&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <h3>Formulario de contacto</h3>
+
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="(809) 000-0000">
+
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="informacion">Solicitar información</option>
+            <option value="compra">Compra de productos</option>
+            <option value="ganado">Compra de ganado</option>
+            <option value="asesoria">Asesoría agropecuaria</option>
+          </select>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <p class="form-note" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">EL PROGRESO</span>
+      <p>Finca ganadera familiar · La Vega, República Dominicana</p>
+    </div>
+    <nav class="footer-nav" aria-label="Enlaces del pie de página">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <p class="footer-copy">© <span id="year"></span> Finca El Progreso. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Volver arriba">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
