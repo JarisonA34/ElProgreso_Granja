@@ -36,6 +36,8 @@
         <li><a href="#productos" class="nav-link">Productos</a></li>
         <li><a href="#galeria" class="nav-link">Galería</a></li>
         <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="gestion.html" class="nav-link">Gestión</a></li>
+        <li><a href="reportes.html" class="nav-link">Reportes</a></li>
       </ul>
     </nav>
 
@@ -55,6 +57,41 @@
       <path fill="var(--green)" opacity="0.55" d="M0 320 C 240 260 420 380 700 300 C 980 220 1180 340 1440 280 L1440 500 L0 500 Z"/>
       <path fill="var(--green-dark)" d="M0 400 C 260 340 460 430 760 370 C 1040 320 1240 420 1440 360 L1440 500 L0 500 Z"/>
       <circle cx="1180" cy="110" r="70" fill="var(--gold)" opacity="0.9"/>
+
+      <!-- vaquita pastando en el potrero -->
+      <g class="hero-cow" transform="translate(300,340) scale(1.15)">
+        <!-- sombra -->
+        <ellipse cx="14" cy="78" rx="44" ry="7" fill="var(--green-dark)" opacity="0.3"/>
+        <!-- patas -->
+        <rect x="-16" y="46" width="8" height="28" rx="3" fill="var(--ink)"/>
+        <rect x="6"   y="46" width="8" height="28" rx="3" fill="var(--ink)"/>
+        <rect x="30"  y="46" width="8" height="28" rx="3" fill="var(--ink)"/>
+        <rect x="50"  y="46" width="8" height="28" rx="3" fill="var(--ink)"/>
+        <!-- cola -->
+        <path d="M-18 8 Q -34 24 -26 46" stroke="var(--ink)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="-26" cy="48" r="4.5" fill="var(--ink)"/>
+        <!-- cuerpo -->
+        <ellipse cx="16" cy="30" rx="46" ry="26" fill="var(--bg)" stroke="var(--ink)" stroke-width="3"/>
+        <!-- manchas -->
+        <ellipse cx="-4" cy="18" rx="11" ry="9" fill="var(--ink)"/>
+        <ellipse cx="30" cy="36" rx="13" ry="10" fill="var(--ink)"/>
+        <ellipse cx="4" cy="38" rx="7" ry="5.5" fill="var(--ink)"/>
+        <!-- cabeza -->
+        <g transform="translate(58,6)">
+          <ellipse cx="0" cy="18" rx="19" ry="16" fill="var(--bg)" stroke="var(--ink)" stroke-width="3"/>
+          <!-- orejas -->
+          <ellipse cx="-15" cy="4" rx="7" ry="5" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5" transform="rotate(-25 -15 4)"/>
+          <ellipse cx="14" cy="2" rx="7" ry="5" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5" transform="rotate(20 14 2)"/>
+          <!-- arete -->
+          <rect x="-22" y="10" width="6" height="8" rx="1.5" fill="var(--accent)"/>
+          <!-- hocico -->
+          <ellipse cx="1" cy="30" rx="12" ry="9" fill="var(--brown)"/>
+          <circle cx="-3" cy="30" r="1.6" fill="var(--ink)"/>
+          <circle cx="6" cy="30" r="1.6" fill="var(--ink)"/>
+          <!-- ojo -->
+          <circle cx="-9" cy="14" r="2.4" fill="var(--ink)"/>
+        </g>
+      </g>
     </svg>
 
     <div class="container hero-inner">
@@ -81,7 +118,9 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <h3>Nuestra historia</h3>
-          <p>El Progreso nació como un pequeño hato familiar de doce cabezas de ganado. Con el paso de los años, y gracias al esfuerzo de tres generaciones, se convirtió en una finca de referencia en la región, reconocida por la calidad de su leche, su carne y su manejo responsable de la tierra.</p>
+          <p>El Progreso nació en 1986 como un pequeño hato familiar con apenas doce cabezas de ganado y el sueño de construir un proyecto basado en el trabajo, la dedicación y el amor por el campo. Desde sus inicios, la finca se ha caracterizado por el esfuerzo constante y el compromiso con la producción agropecuaria de calidad.
+          <p>Con el paso de los años, y gracias al trabajo conjunto de tres generaciones de la familia, El Progreso fue creciendo de manera sostenida, incorporando mejores prácticas de manejo, ampliando sus instalaciones y fortaleciendo su producción. Hoy en día, es una finca reconocida en la región por la calidad de su leche y su carne, así como por su compromiso con el bienestar animal, el cuidado del medio ambiente y el manejo responsable de la tierra.
+          <p>Más que una finca, El Progreso representa el legado de una familia que ha dedicado décadas a producir con responsabilidad, manteniendo vivos los valores de esfuerzo, honestidad y respeto por la naturaleza que dieron origen a este proyecto.</p>
         </div>
         <div class="about-photo reveal">
           <div class="photo-frame ph-instalaciones"><img src="img/instalaciones.jpg" alt="Instalaciones principales" loading="lazy" onerror="this.remove()"><span>Instalaciones principales</span></div>
@@ -306,6 +345,8 @@
       <a href="#productos">Productos</a>
       <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
+      <a href="gestion.html">Gestión</a>
+      <a href="reportes.html">Reportes</a>
     </nav>
     <p class="footer-copy">© <span id="year"></span> Finca El Progreso. Todos los derechos reservados.</p>
   </div>

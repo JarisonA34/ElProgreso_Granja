@@ -1,0 +1,14 @@
+{
+  "name": "finca-el-progreso",
+  "version": "2.0.0",
+  "description": "Sitio web y sistema de gestión de producción de leche para la finca ganadera El Progreso",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
+}
