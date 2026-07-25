@@ -238,8 +238,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: var(--radius);
   padding: 28px;
 }
-.mvv-icon{ font-size:1.6rem; display:block; margin-bottom:.4em; }
-.mvv-card h3{ font-size:1.15rem; }
+.mvv-card h3{ 
+  display: flex;
+  justify-content: center;
+  font-size:1.50rem;
+}
 
 .team-block{ margin-bottom: 70px; }
 .team-block h3{ font-size:1.3rem; margin-bottom: 1em; }
@@ -450,7 +453,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .site-footer{
   background: var(--green-dark);
   color: #E7E2D2;
-  padding: 56px 0 28px;
+  padding: 5px 0 5px;
 }
 .footer-inner{
   display:flex; flex-wrap:wrap; gap: 28px;
