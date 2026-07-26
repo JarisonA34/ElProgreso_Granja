@@ -36,7 +36,12 @@ body{
   background: var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main{ flex: 1 0 auto; }
 
 img, svg{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
@@ -454,6 +459,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--green-dark);
   color: #E7E2D2;
   padding: 5px 0 5px;
+  flex-shrink: 0;
 }
 .footer-inner{
   display:flex; flex-wrap:wrap; gap: 28px;
@@ -552,6 +558,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin-top:.25em;
 }
 
+.char-count{
+  font-family: var(--font-mono);
+  font-size:.7rem;
+  font-weight:400;
+  color: var(--ink-soft);
+  float:right;
+}
+
 .admin-list-head{
   display:flex;
   align-items:center;
@@ -598,6 +612,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   text-align:center;
   color: var(--ink-soft);
   padding: 32px 16px !important;
+}
+
+.obs-cell{
+  max-width: 260px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 
 .table-actions{ display:flex; gap:8px; white-space:nowrap; }
@@ -650,4 +671,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 900px){
   .admin-grid{ grid-template-columns: 1fr; }
   .admin-form{ position:static; }
+  .obs-cell{ max-width: 160px; }
 }

@@ -24,6 +24,8 @@ CREATE TABLE IF NOT EXISTS produccion_leche (
                     REFERENCES empleados(id) ON DELETE RESTRICT,
   estado           VARCHAR(20) NOT NULL DEFAULT 'Registrado'
                     CHECK (estado IN ('Registrado', 'Verificado', 'Anulado')),
+  observaciones    VARCHAR(200) NOT NULL
+                    CHECK (char_length(observaciones) >= 5),
   creado_en        TIMESTAMP NOT NULL DEFAULT NOW()
 );
 

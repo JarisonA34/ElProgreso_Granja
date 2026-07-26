@@ -11,7 +11,7 @@ const ESTADOS = ['Registrado', 'Verificado', 'Anulado'];
  */
 function validarProduccion(body) {
   const errores = [];
-  const { fecha, turno, cantidad_litros, empleado_id, estado } = body;
+  const { fecha, turno, cantidad_litros, empleado_id, estado, observaciones } = body;
 
   // Campos obligatorios
   if (!fecha) errores.push('La fecha es obligatoria.');
@@ -37,6 +37,16 @@ function validarProduccion(body) {
     errores.push('El estado debe ser "Registrado", "Verificado" o "Anulado".');
   }
 
+  // Validación de longitud de campo (texto libre)
+  const obs = (observaciones || '').trim();
+  if (!obs) {
+    errores.push('Las observaciones son obligatorias.');
+  } else if (obs.length < 5) {
+    errores.push('Las observaciones deben tener al menos 5 caracteres.');
+  } else if (obs.length > 200) {
+    errores.push('Las observaciones no pueden superar 200 caracteres.');
+  }
+
   return errores;
 }
 
@@ -44,7 +54,7 @@ function validarProduccion(body) {
 router.get('/', async (req, res) => {
   try {
     const { rows } = await pool.query(`
-      SELECT p.id, p.fecha, p.turno, p.cantidad_litros, p.estado, p.creado_en,
+      SELECT p.id, p.fecha, p.turno, p.cantidad_litros, p.estado, p.observaciones, p.creado_en,
              e.id AS empleado_id, e.nombre AS empleado_nombre
       FROM produccion_leche p
       JOIN empleados e ON e.id = p.empleado_id
@@ -79,12 +89,12 @@ router.post('/', async (req, res) => {
   const errores = validarProduccion(req.body);
   if (errores.length) return res.status(400).json({ errores });
 
-  const { fecha, turno, cantidad_litros, empleado_id, estado } = req.body;
+  const { fecha, turno, cantidad_litros, empleado_id, estado, observaciones } = req.body;
   try {
     const { rows } = await pool.query(
-      `INSERT INTO produccion_leche (fecha, turno, cantidad_litros, empleado_id, estado)
-       VALUES ($1, $2, $3, $4, $5) RETURNING *`,
-      [fecha, turno, cantidad_litros, empleado_id, estado || 'Registrado']
+      `INSERT INTO produccion_leche (fecha, turno, cantidad_litros, empleado_id, estado, observaciones)
+       VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
+      [fecha, turno, cantidad_litros, empleado_id, estado || 'Registrado', observaciones.trim()]
     );
     res.status(201).json({ mensaje: 'Registro guardado correctamente.', registro: rows[0] });
   } catch (err) {
@@ -98,13 +108,13 @@ router.put('/:id', async (req, res) => {
   const errores = validarProduccion(req.body);
   if (errores.length) return res.status(400).json({ errores });
 
-  const { fecha, turno, cantidad_litros, empleado_id, estado } = req.body;
+  const { fecha, turno, cantidad_litros, empleado_id, estado, observaciones } = req.body;
   try {
     const { rows } = await pool.query(
       `UPDATE produccion_leche
-       SET fecha = $1, turno = $2, cantidad_litros = $3, empleado_id = $4, estado = $5
-       WHERE id = $6 RETURNING *`,
-      [fecha, turno, cantidad_litros, empleado_id, estado, req.params.id]
+       SET fecha = $1, turno = $2, cantidad_litros = $3, empleado_id = $4, estado = $5, observaciones = $6
+       WHERE id = $7 RETURNING *`,
+      [fecha, turno, cantidad_litros, empleado_id, estado, observaciones.trim(), req.params.id]
     );
     if (rows.length === 0) {
       return res.status(404).json({ error: 'Registro no encontrado.' });

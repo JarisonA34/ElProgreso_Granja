@@ -54,6 +54,7 @@
     <div class="container">
       <span class="tag-badge">GESTIÓN · PRODUCCIÓN DE LECHE</span>
       <h1 class="section-title">Registro de producción de leche</h1>
+      <p class="admin-lead">Cada ordeño se registra aquí y queda almacenado en la base de datos PostgreSQL de la finca. Desde esta pantalla puedes agregar, modificar y eliminar registros.</p>
 
       <div class="admin-grid">
         <!-- ============ FORMULARIO ============ -->
@@ -90,6 +91,11 @@
             <option value="Anulado">Anulado</option>
           </select>
 
+          <label for="observaciones">Observaciones * <span class="char-count" id="obs-count">0/200</span></label>
+          <textarea id="observaciones" name="observaciones" rows="3" minlength="5" maxlength="200"
+            placeholder="Ej. Ordeño sin novedades, animales sanos." required></textarea>
+          <small class="field-error" id="err-observaciones"></small>
+
           <div class="admin-form-actions">
             <button type="submit" class="btn btn-primary" id="submit-btn">Guardar registro</button>
             <button type="button" class="btn btn-outline" id="cancel-edit" hidden>Cancelar edición</button>
@@ -113,11 +119,12 @@
                   <th>Empleado</th>
                   <th>Litros</th>
                   <th>Estado</th>
+                  <th>Observaciones</th>
                   <th>Acciones</th>
                 </tr>
               </thead>
               <tbody id="produccion-tbody">
-                <tr><td colspan="7" class="table-empty">Cargando registros…</td></tr>
+                <tr><td colspan="8" class="table-empty">Cargando registros…</td></tr>
               </tbody>
             </table>
           </div>
