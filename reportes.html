@@ -54,12 +54,14 @@
     <div class="container">
       <span class="tag-badge">REPORTES · PRODUCCIÓN DE LECHE</span>
       <h1 class="section-title">Informe de producción</h1>
+      <p class="admin-lead">Este informe se genera en tiempo real a partir de los datos almacenados en PostgreSQL.</p>
 
       <div class="report-toolbar">
         <div class="report-stats" id="report-stats" aria-live="polite"></div>
         <div class="report-actions">
           <button class="btn btn-outline btn-small" id="refresh-report" type="button">Actualizar</button>
-          <button class="btn btn-primary btn-small" id="print-report" type="button">Imprimir informe</button>
+          <button class="btn btn-outline btn-small" id="export-excel" type="button">Exportar a Excel</button>
+          <button class="btn btn-primary btn-small" id="export-pdf" type="button">Descargar PDF</button>
         </div>
       </div>
 
@@ -73,10 +75,11 @@
               <th>Turno</th>
               <th>Cantidad (L)</th>
               <th>Estado</th>
+              <th>Observaciones</th>
             </tr>
           </thead>
           <tbody id="report-tbody">
-            <tr><td colspan="6" class="table-empty">Consultando la base de datos…</td></tr>
+            <tr><td colspan="7" class="table-empty">Consultando la base de datos…</td></tr>
           </tbody>
         </table>
       </div>
@@ -107,6 +110,9 @@
 
 <button class="to-top" id="to-top" aria-label="Volver arriba">↑</button>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/reportes.js"></script>
 </body>
